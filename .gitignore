@@ -1,0 +1,5 @@
+data/generated/
+results/fastqc/
+__pycache__/
+*.pyc
+.DS_Store
