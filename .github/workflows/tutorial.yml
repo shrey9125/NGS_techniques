@@ -1,0 +1,16 @@
+name: tutorial-check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  run-tutorial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: chmod +x run_tutorial.sh
+      - run: ./run_tutorial.sh
